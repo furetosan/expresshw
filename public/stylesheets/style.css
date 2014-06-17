@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: Brankovic;
+  src: url(brankovic.ttf);
+}
+
+p {
+  text-align: justify;
+  padding: 20px;
+}
+
+h1 {
+  font-family: Brankovic;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: Brankovic;
+  font-size: 2em;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.toprightnav {
+  text-align: right;
+  background: -webkit-linear-gradient(red, green, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, green, blue); /* Standard syntax */
+}
+
+.topright {
+  position: relative;
+  top: -50px;
+  right: -50px;
+  float: right;
+}
+
+leftext {
+  position: relative;
+  left: -100px;
+  top: -100px;
+}

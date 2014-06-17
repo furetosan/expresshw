@@ -1,0 +1,13 @@
+extends layout
+
+block sidebar
+  include sidebar.jade
+
+block content
+  h2= title
+  div(class="leftext")
+    p Bem-vindo ao site que não precisa fingir que não é pessoal. Atualmente venho afiando minha capacidade de escrever código. Parte deste esforço de férias inclui uma releitura da dupla HTML5 e CSS3, e parte requer um grande esforço em instalar e  tornar-me fluente em uma biblioteca chamada SfePy.
+    p O SfePy é uma biblioteca para resolução de problemas de elementos finitos, escrita em Python 2.7, e que depende de uma multitude de outras bibliotecas. Se por um lado há uma dificuldade inicial na instalação do sistema, parece-me que o poder dele advindo compensa tais dificuldades.
+
+block footer
+  include footer.jade
