@@ -3,7 +3,22 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='script', href='/script.js')
   body
-    block sidebar
+    nav
+      ul
+        li
+          a Menu
+          ul
+            li
+              a(href='/') Home
+            li
+              a(href='/pesquisa') Pesquisa
+            li
+              a(href='/alunos') Alunos
+            li
+              a(href='http://guiadoengenheiro.com.br') Guia do Engenheiro
+            li
+              a(href='/games') Games
     block content
     block footer

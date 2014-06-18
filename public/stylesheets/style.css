@@ -9,9 +9,81 @@ body {
   src: url(brankovic.ttf);
 }
 
+/* START NAV MENU */
+nav {
+  background-color:#2C5463;
+  height:40px;
+}
+ 
+ 
+nav ul {
+  font-family: Brankovic;
+  font-size: 1.3em;
+  /* margin: 10px; */
+  /* padding: 20px; */
+  list-style: none;
+}
+ 
+nav ul li {
+  display: block;
+  position: relative;
+  float: left;
+}
+ 
+nav li ul { 
+  display: none; 
+}
+ 
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 5px 5px 5px;
+  background: #2C5463;
+  color: #ffffff;  
+  margin-left: 1px;
+  white-space: nowrap;
+  height: 30px; /* Width and height of top-level nav items */
+  width: 250px;
+  text-align:center;
+ 
+}
+ 
+nav ul li a:hover { 
+  background: #617F8A; 
+}
+ 
+nav li:hover ul {
+  display: block;
+  position: absolute;
+  /* height: 30px; */
+}
+ 
+nav li:hover li {
+  float: none;
+}
+ 
+nav li:hover a { 
+  background: #3A464F; 
+  /* height:30px;  Height of lower-level nav items is shorter than main level */
+}
+ 
+nav li:hover li a:hover { 
+  background: #95A9B1; 
+}
+ 
+nav ul li ul li a {
+    text-align:left; /* Top-level items are centered, but nested list items are left-aligned */
+}
+ 
+/* END NAV MENU */
+
 p {
   text-align: justify;
   padding: 20px;
+}
+
+pre {
+  text-align: right;
 }
 
 h1 {
@@ -22,18 +94,6 @@ h1 {
 h2 {
   font-family: Brankovic;
   font-size: 2em;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.toprightnav {
-  text-align: right;
-  background: -webkit-linear-gradient(red, green, blue); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, green, blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, green, blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(red, green, blue); /* Standard syntax */
 }
 
 .topright {
