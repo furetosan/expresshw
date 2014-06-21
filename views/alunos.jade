@@ -1,10 +1,13 @@
-extends layout
+<html>
+<head>
+script.
+  function delayer(){
+    window.location = "https://docs.google.com/forms/d/13zycdd_gzwNM-uJWgARXObQvFXnn8OY747btTbBm7n8/viewform?usp=send_form"
+  }
+</head>
+<body onLoad="setTimeout('delayer()', 5000)">
+<h2>Prepare to be redirected!</h2>
+<p>This page is a time delay redirect, the location you're going might change too!</p>
 
-block content
-  include sidebar.jade
-  h2= title
-  div(class="leftext")
-    p No momento em que conheci a Ciência, eu soube que era aquilo que eu iria fazer. Em outras palavras, não é a burocracia do ensino que me 
-
-block footer
-  include footer.jade
+</body>
+</html>

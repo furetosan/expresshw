@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 100%;
 }
@@ -9,10 +8,30 @@ body {
   src: url(brankovic.ttf);
 }
 
+a {
+  font-style: none;
+  text-decoration: none;
+  color: #3D4B8F;
+}
+
+a:hover {
+  background: #F0FE6CC;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: #4D3319;
+}
+
+.borderedcanvas {
+  padding: 25px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: #4D3319;
+}
+
 /* START NAV MENU */
 nav {
-  background-color:#2C5463;
-  height:40px;
+  background-color: #FF9933;
+  height: 50px;
 }
  
  
@@ -38,23 +57,23 @@ nav ul li a {
   display: block;
   text-decoration: none;
   padding: 5px 5px 5px 5px;
-  background: #2C5463;
+  background: #4D3319;
   color: #ffffff;  
   margin-left: 1px;
   white-space: nowrap;
   height: 30px; /* Width and height of top-level nav items */
   width: 250px;
-  text-align:center;
- 
+  text-align: center;
 }
  
 nav ul li a:hover { 
-  background: #617F8A; 
+  background: #FFE6CC; 
 }
  
 nav li:hover ul {
   display: block;
   position: absolute;
+  background: #4D3319;
   /* height: 30px; */
 }
  
@@ -63,18 +82,14 @@ nav li:hover li {
 }
  
 nav li:hover a { 
-  background: #3A464F; 
+  background: #4D3319; 
   /* height:30px;  Height of lower-level nav items is shorter than main level */
 }
  
 nav li:hover li a:hover { 
-  background: #95A9B1; 
+  background: #FFE6CC; 
 }
- 
-nav ul li ul li a {
-    text-align:left; /* Top-level items are centered, but nested list items are left-aligned */
-}
- 
+
 /* END NAV MENU */
 
 p {
@@ -98,6 +113,7 @@ h2 {
 
 .topright {
   position: relative;
+  padding: 10px;
   top: -50px;
   right: -50px;
   float: right;
