@@ -103,6 +103,10 @@ h2 {
   float: right;
 }
 
+.footer {
+  width: 480px;
+}
+
 leftext {
   position: relative;
   left: -100px;
