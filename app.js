@@ -31,6 +31,7 @@ app.get('/', routes.index);
 app.get('/pesquisa', routes.pesquisa);
 app.get('/games', routes.games);
 app.get('/alunos', function(req,res){ res.render('alunos'); });
+app.get('/chat', function(req,res){ res.render('chat'); });
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

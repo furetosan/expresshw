@@ -37,7 +37,7 @@ nav {
  
 nav ul {
   font-family: Brankovic;
-  font-size: 1.3em;
+  font-size: 1.2em;
   /* margin: 10px; */
   /* padding: 20px; */
   list-style: none;
@@ -111,6 +111,11 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-family: Brankovic;
+  font-size: 1.1em;
+}
+
 .topright {
   position: relative;
   padding: 10px;
@@ -120,7 +125,25 @@ h2 {
 }
 
 .footer {
-  width: 480px;
+  width: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.footer ul {
+  margin: 10px;
+  padding: 20px;
+  list-style: none;
+}
+
+.footer ul li {
+  padding: 10px;
+  background-color: #99AAFF;
+  /* border-width: 5px;
+  border-style: dotted;
+  border-color: #4D3319; */
+  display: block;
+  position: relative;
+  float: left;
 }
 
 leftext {
