@@ -4,7 +4,35 @@ block content
   include sidebar.jade
   h1= title
   div(class="leftext")
-    p Houve um tempo em que pequenos pixels se moviam por telas negras e verdes, em que crianças maravilhavam-se com sons e brilhos monocromáticos. Algumas empresas 
+    p Houve um tempo em que pequenos pixels se moviam por telas negras e verdes, em que crianças maravilhavam-se com sons e brilhos monocromáticos. Algumas empresas (e.. corta!).
+    p Enquanto isso, em uma localidade confidencial:
+    pre.
+      server:linest ffbittencourt$ python -V
+      Python 2.7.6 --  64-bit 
+      server:linest ffbittencourt$ ipython
+      Python 2.7.6 | 64-bit | (default, Apr 11 2014, 11:55:30) 
+      Type "copyright", "credits" or "license" for more information.
+      
+      IPython 2.1.0 -- An enhanced Interactive Python.
+      ?         -> Introduction and overview of IPython's features.
+      %quickref -> Quick reference.
+      help      -> Python's own help system.
+      object?   -> Details about 'object', use 'object??' for extra details.
+      
+      In [1]: import sys
+      
+      In [2]: sys.version
+      Out[2]: '2.7.6 | 64-bit | (default, Apr 11 2014, 11:55:30) \n[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)]'
+      
+      In [3]: exit
+      server:linest ffbittencourt$ python
+      Enthought Canopy Python 2.7.6 | 64-bit | (default, Apr 11 2014, 11:55:30) 
+      [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
+      Type "help", "copyright", "credits" or "license" for more information.
+      >>> 
+      
+    p But that didn’t work out of the box.
+
 
 block footer
   include footer.jade
