@@ -31,8 +31,78 @@ block content
       Type "help", "copyright", "credits" or "license" for more information.
       >>> 
       
-    p But that didn’t work out of the box.
+    p But that didn't work out of the box.
 
+    p This did:
+    canvas(id="game001",width="640",height="480")
+    script.
+      var canvas = document.getElementById("game001");
+      var paddleY;
+      var scoreyou = 0;
+      var scoreme = 0;
+      var ballx;
+      var bally;
+      var speedx;
+      var speedy;
+      var context = canvas.getContext("2d");
+      randomizeBall();
+      canvas.addEventListener("mousemove", updatePaddle);
+      context.font = "20px Georgia";
+      var global = setInterval(function(){redrawCanvas()},33);
+      function updateBall(pY) {
+        console.log(speedx);
+        if(ballx < 30) {
+          var balltop = bally;
+          var ballbot = bally+10;
+          var ballcenter = (balltop+ballbot)/2;
+          var paddletop = pY;
+          var paddlebot = pY + 200;
+          var paddlecenter = (paddletop+paddlebot)/2;
+          if((ballbot>pY) && (balltop<paddlebot)) {
+            speedx = -speedx*1.2;
+            speedy = speedy + (ballcenter-paddlecenter)/10;
+            scoreyou += 1;
+          } else {
+            scoreme += 7;
+            randomizeBall();
+          }
+        }
+        if(ballx+10>640) {
+          speedx= -speedx;
+        }
+        if(bally+10 > 480) {
+          speedy = -speedy;
+        }
+        if(bally < 0) {
+          speedy = -speedy;
+        }
+      }
+      function redrawCanvas() {
+        ballx += speedx;
+        bally += speedy;
+        canvas.width = canvas.width;
+        updateBall(paddleY);
+        context.fillRect(10, paddleY, 20, 100);
+        context.fillRect(ballx,bally,10,10);
+        context.rect(0,0,canvas.width,canvas.height);
+        context.stroke();
+        context.fillText("You: "+scoreyou+"\n Me: "+scoreme,40,10);
+      }
+      function updatePaddle(mouseEvent) {
+        if(mouseEvent.offsetY>canvas.height-100) {
+          paddleY = canvas.height-100;
+        } else if (mouseEvent.offsetY<0) {
+          paddleY = 0;
+        } else {
+          paddleY = mouseEvent.offsetY;
+        }
+      }
+      function randomizeBall() {
+        ballx = 480*Math.random()+200;
+        bally = 480*Math.random();
+        speedx = 5*Math.random()+8;
+        speedy = 5*Math.random();
+      }
 
 block footer
   include footer.jade
